@@ -15,6 +15,14 @@ def like(request, user_id):
 
 def user_page(request, user_id):
     user = User.objects.get(id=user_id)
-    return render(request, "index.html", {
+    return render(request, "user_page.html", {
         "user": user,
+    }
+    )
+
+
+def index(request):
+    all_users = User.objects.all()
+    return render(request, "index.html", {
+        "all_users": all_users,
     })

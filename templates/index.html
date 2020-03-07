@@ -1,12 +1,18 @@
 {% extends "base.html" %}
 
-{% block head %}
-{% load static %}
-<script  src="{% static 'js/user_page.js' %}"></script>
-{% endblock %}
-
 {% block content %}
-<p> {{ user.username }} </p>
-<p> Like: {{ user.likerer.like }} </p>
-<p> <button onclick="make_like({{ user.id }})">like</button> </p>
+<div class="all_users">
+    {% for u in all_users %}
+        <div class="user">
+            <div class="username">
+                {{ u.username }}
+            </div>
+            
+            <div class="likes">
+                Like: {{ user.likerer.like }}
+            </div>
+        </div>
+        <hr>
+    {% endfor %}
+</div>
 {% endblock %}

@@ -2,3 +2,11 @@
 *pyc
 __pycache__
 migrations
+venv
+
+uwsgi_params
+test.py
+run.sh
+likeme.sock
+likeme_uwsgi.ini
+likeme_nginx.conf
